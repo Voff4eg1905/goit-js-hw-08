@@ -1,6 +1,6 @@
 let throttle = require('lodash.throttle');
 const formEl = document.querySelector('.feedback-form');
-const userData = {};
+let userData = {};
 fillTheForm();
 
 const onInputChange = event => {
@@ -36,6 +36,7 @@ const onSubmit = event => {
   event.preventDefault();
   console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
   formEl.reset();
+  userData = {};
   localStorage.removeItem('feedback-form-state');
 };
 formEl.addEventListener('input', throttle(onInputChange, 500));
