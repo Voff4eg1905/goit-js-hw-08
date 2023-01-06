@@ -22,7 +22,7 @@ function fillTheForm() {
         if (userInfoForm === null) {
             return;
         }
-        for (field in userInfoForm) {
+        for (const field in userInfoForm) {
             formEl.elements[field].value = userInfoForm[field];
         }
         
