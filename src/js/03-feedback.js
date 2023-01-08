@@ -32,6 +32,7 @@ function fillTheForm() {
 
 const onSubmit = event => {
   event.preventDefault();
+  console.log(userData);
   formEl.reset();
   userData = {};
   localStorage.removeItem('feedback-form-state');
